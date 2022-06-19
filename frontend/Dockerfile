@@ -5,7 +5,7 @@ WORKDIR /frontend/
 COPY package.json .
 RUN npm install
 
-COPY docke. .
+COPY . .
 
 EXPOSE 3000
 
