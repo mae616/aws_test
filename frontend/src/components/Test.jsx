@@ -19,6 +19,6 @@ function Test() {
     };
   }, []);
 
-  return <div>aaa{message}</div>;
+  return <div>{message}</div>;
 }
 export default Test;
