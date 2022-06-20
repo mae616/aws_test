@@ -1,4 +1,4 @@
-FROM node:18-alpine3.15
+FROM node:18-alpine3.15 as builder
 
 WORKDIR /frontend/
 
@@ -7,6 +7,8 @@ RUN npm install
 
 COPY . .
 
-EXPOSE 3000
+RUN npm run build
 
-CMD ["npm", "start"]
+FROM nginx:1.21.6-alpine
+COPY --from=builder /frontend/build /usr/share/nginx/html
+EXPOSE 80

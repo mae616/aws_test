@@ -6,7 +6,7 @@ function Test() {
   useEffect(() => {
     let abort = false;
     const fetchData = async () => {
-      const response = await fetch("http://localhost:4000/");
+      const response = await fetch("http://localhost:8000/");
       const data = await response.json();
       if (!abort) {
         setMessage(data.message);

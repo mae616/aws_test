@@ -11,6 +11,6 @@ app.get("/", (req, res) => {
 
 app.use("/member", require("./member"));
 
-app.listen(4000, () => {
+app.listen(8000, () => {
   console.log("server start...");
 });
